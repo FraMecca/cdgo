@@ -24,3 +24,8 @@ The tool depends on [kv](http://francescomecca.eu:3000/pesceWanda/kv).
     delete [directory]     remove a previously registered checkpoint
     purge                  remove all the checkpoints
     [tag]                  go to the folder associated with the specified tag
+
+# Installation
+
+cdgo is provided as a fish script.
+It must be copied in the fish configuration folder `.config/fish/functions/`
