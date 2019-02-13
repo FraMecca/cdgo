@@ -2,7 +2,7 @@ cdgo
 ===
 **cdgo** is a tool for fast navigation across folders.
 
-The tool depends on [kv](http://francescomecca.eu:3000/pesceWanda/kv).
+The tool depends on [kv](http://francescomecca.eu/git/pesceWanda/kv).
 
 # Example usage
 
