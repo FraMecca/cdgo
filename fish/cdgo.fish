@@ -1,5 +1,6 @@
 function cdgo
-	set DB /home/user/.local/share/cdgo/db
+	set DB ~/.local/share/cdgo/db
+	mkdir -p  ~/.local/share/cdgo/
 	touch $DB
 	set argc (count $argv)
 	set helpflag 0
@@ -41,10 +42,11 @@ function cdgo
     			set helpflag 1
     		case '*'
     			set flag 0
-    			for p in (kv -l $DB)
+    			for p in (kv -l "$DB")
     				set key (echo $p | cut -d':' -f1)
     				if test $key = $argv[1]
-    					cd (echo $p | cut -d' ' -f2)
+    					set dst (echo $p | sed "s/$key: //g")
+                        cd $dst
     					set flag 1
     					break
     				end
